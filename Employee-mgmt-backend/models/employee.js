@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 // define employee schema
 
 const employeeSchema = new mongoose.Schema({
-  empId: {
+  emp_id: {
     type: String,
     required: true,
   },
