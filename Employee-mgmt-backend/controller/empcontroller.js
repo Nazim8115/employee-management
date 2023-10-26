@@ -2,6 +2,7 @@ const Employee = require("../models/employee.js");
 // create new employee
 class employeeController {
   static createEmployee = async (req, res) => {
+    console.log(req.body);
     const {
       emp_id,
       first_name,
@@ -18,8 +19,9 @@ class employeeController {
       leave_balance,
       profile_picture,
     } = req.body;
-
-    const newEmployee = new Employee({
+    console.log(salary);
+    console.log(profile_picture);
+    Employee.create({
       emp_id,
       first_name,
       last_name,
@@ -35,7 +37,7 @@ class employeeController {
       leave_balance,
       profile_picture,
     });
-    await newEmployee.save();
     res.status(201).json({ message: "Employee created successfully" });
   };
 }
+module.exports = employeeController;
