@@ -42,7 +42,7 @@ const employeeSchema = new mongoose.Schema({
   leave_balance: {
     type: Number,
   },
-  profile_picture: {
+  imageUrl: {
     type: String,
   },
 });

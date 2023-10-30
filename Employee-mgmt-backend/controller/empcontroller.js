@@ -17,8 +17,8 @@ class employeeController {
         emp_status,
         supervisor,
         leave_balance,
-        profile_picture,
       } = req.body;
+      const imageUrl = "images/" + req.file.filename;
       EmployeeModel.create({
         emp_id,
         first_name,
@@ -33,7 +33,7 @@ class employeeController {
         emp_status,
         supervisor,
         leave_balance,
-        profile_picture,
+        imageUrl,
       });
       res.status(201).json({ message: "Employee created successfully" });
     } catch (error) {

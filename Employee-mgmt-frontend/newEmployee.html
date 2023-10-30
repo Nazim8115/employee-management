@@ -61,56 +61,111 @@
     <!-- main content -->
     <div class="container">
       <h1>Add new Employee</h1>
-      <div class="form">
+
+      <form
+        action="http://localhost:8200/create-employee"
+        method="post"
+        enctype="multipart/form-data"
+      >
         <div class="row">
           <div class="col-md-6">
             <label for="fname" class="req">First Name</label>
-            <input type="text" class="form-control" />
+            <input
+              type="text"
+              name="first_name"
+              id="first_name"
+              class="form-control"
+            />
           </div>
           <div class="col-md-6">
             <label for="lname" class="req">Last Name</label>
-            <input type="text" class="form-control" />
+            <input
+              type="text"
+              name="last_name"
+              id="last_name"
+              class="form-control"
+            />
           </div>
           <div class="col-md-6">
             <label for="email" class="req">Email</label>
-            <input type="text" class="form-control" />
+            <input type="text" class="form-control" name="email" id="email" />
           </div>
           <div class="col-md-6">
             <label for="phone" class="req">Phone Number</label>
-            <input type="text" class="form-control" />
+            <input
+              type="text"
+              name="phone_number"
+              id="phone_number"
+              class="form-control"
+            />
           </div>
           <div class="col-md-6">
             <label for="address" class="req">Address</label>
-            <input type="text" class="form-control" />
+            <input
+              type="text"
+              class="form-control"
+              name="address"
+              id="address"
+            />
           </div>
 
           <div class="col-md-6">
             <label for="department" class="req">Department</label>
-            <input type="text" class="form-control" />
+            <input
+              type="text"
+              name="department"
+              id="department"
+              class="form-control"
+            />
           </div>
           <div class="col-md-6">
             <label for="job title" class="req">Job Title</label>
-            <input type="text" class="form-control" />
+            <input
+              type="text"
+              name="job_title"
+              id="job_title"
+              class="form-control"
+            />
           </div>
           <div class="col-md-6">
             <label for="salary" class="req">Salary</label>
-            <input type="text" class="form-control" />
+            <input type="text" name="salary" id="salary" class="form-control" />
           </div>
           <div class="col-md-4">
             <label for="hire_date" class="req">Hire Date</label>
-            <input type="text" class="form-control" />
+            <input
+              type="text"
+              name="hire_date"
+              id="hire_date"
+              class="form-control"
+            />
           </div>
           <div class="col-md-4">
-            <label for="emp_status" class="req">Employee Status</label>
-            <input type="text" class="form-control" />
+            <label for="status" class="req">Employee Status</label>
+            <input
+              type="text"
+              name="emp_status"
+              id="emp_status"
+              class="form-control"
+            />
           </div>
           <div class="col-md-4">
             <label for="supervisor" class="req">Supervisor</label>
-            <input type="text" class="form-control" />
+            <input
+              type="text"
+              name="supervisor"
+              id="supervisor"
+              class="form-control"
+            />
           </div>
           <div class="col-md-6">
             <label for="leave_balance" class="req">Leave Balance</label>
-            <input type="text" class="form-control" />
+            <input
+              type="text"
+              name="leave_balance"
+              id="leave_balance"
+              class="form-control"
+            />
           </div>
           <div class="col-md-6">
             <label for="imageUrl" class="req form-label">Profile Picture</label>
@@ -124,7 +179,7 @@
           </div>
         </div>
         <button type="submit" class="btn btn-dark mt-3">Submit</button>
-      </div>
+      </form>
     </div>
 
     <script
