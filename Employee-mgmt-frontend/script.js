@@ -16,7 +16,12 @@ $(document).ready(function () {
        <td>${values.department}</td>
        <td>${values.job_title}</td>
        <td>${values.emp_status}</td>
-       <td><img src = "${values.profile_picture}" alt="profile image"/></td>
+       <td><img src = "/Employee-mgmt-backend/public/images/${values.imageUrl}" alt="profile image"/></td>
+       <td><i class="fa-regular fa-eye" style="color: #100f4e"></i> <i
+       class="fa-solid fa-pen-to-square"
+       style="color: #100f4e"
+        ></i> <i class="fa-solid fa-trash" style="color: #db0c40"></i>
+      </td>
        </tr>`;
       });
       $("#table-body").html(tableData);

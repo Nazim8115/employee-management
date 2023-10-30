@@ -18,7 +18,7 @@ class employeeController {
         supervisor,
         leave_balance,
       } = req.body;
-      const imageUrl = "images/" + req.file.filename;
+      const imageUrl = req.file.filename;
       EmployeeModel.create({
         emp_id,
         first_name,
