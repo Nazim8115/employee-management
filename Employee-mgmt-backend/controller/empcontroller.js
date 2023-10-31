@@ -4,7 +4,6 @@ class employeeController {
   static createEmployee = async (req, res) => {
     try {
       const {
-        emp_id,
         first_name,
         last_name,
         email,
@@ -18,6 +17,8 @@ class employeeController {
         supervisor,
         leave_balance,
       } = req.body;
+
+      const emp_id = (await EmployeeModel.find()).length + 1;
       const imageUrl = req.file.filename;
       EmployeeModel.create({
         emp_id,
