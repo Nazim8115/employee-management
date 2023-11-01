@@ -23,7 +23,8 @@ app.post(
   uploadFile.single("imageUrl"),
   employeeController.createEmployee
 );
-app.get("/get-employee", employeeController.getAllEmployee),
-  app.listen(port, () => {
-    console.log(`Server is running at :${port}`);
-  });
+app.get("/employee/:id", employeeController.getEmployeeById);
+app.get("/get-employee", employeeController.getAllEmployee);
+app.listen(port, () => {
+  console.log(`Server is running at :${port}`);
+});

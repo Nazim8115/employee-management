@@ -50,5 +50,19 @@ class employeeController {
       console.log(error);
     }
   };
+
+  static getEmployeeById = async (req, res) => {
+    try {
+      const employee = await EmployeeModel.findById({
+        _id: "653f8ab5847bf27c81feb1c4",
+      });
+      if (!employee) {
+        return res.status(404).json({ error: "Employee not found" });
+      }
+      res.json(employee);
+    } catch (error) {
+      res.status(500).json({ error: "Internal server error" });
+    }
+  };
 }
 module.exports = employeeController;
