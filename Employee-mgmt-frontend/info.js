@@ -16,11 +16,10 @@ $(document).ready(function () {
     success: function (data) {
       let userInfo = "";
       userInfo += ` <div class="col-lg-6 mb-4 mb-lg-0">
-      <img
-        src="https://bootdey.com/img/Content/avatar/avatar7.png"
-        alt="..."
-      />
-    </div>
+        <img src = "/Employee-mgmt-backend/public/images/${
+          data.imageUrl
+        }" alt="profile image"/>
+        </div>
     <div class="col-lg-6 px-xl-10">
       <div
         class="bg-secondary d-lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded"
@@ -36,7 +35,7 @@ $(document).ready(function () {
             class="display-26 text-secondary me-2 font-weight-600"
             >Job Title:</span
           >
-          Software Engineer
+          ${data.job_title}
         </li>
         <li class="mb-2 mb-xl-3 display-28">
           <span
@@ -50,14 +49,14 @@ $(document).ready(function () {
             class="display-26 text-secondary me-2 font-weight-600"
             >Email:</span
           >
-          nazimkhan@mail.com
+          ${data.email}
         </li>
         <li class="mb-2 mb-xl-3 display-28">
           <span
             class="display-26 text-secondary me-2 font-weight-600"
             >Phone:</span
           >
-          811-512-1019
+          ${data.phone}
         </li>
 
         <li class="mb-2 mb-xl-3 display-28">
@@ -65,28 +64,28 @@ $(document).ready(function () {
             class="display-26 text-secondary me-2 font-weight-600"
             >Hire Date:</span
           >
-          5/12/2022
+          ${data.hire_date}
         </li>
         <li class="mb-2 display-28">
           <span
             class="display-26 text-secondary me-2 font-weight-600"
             >Employee Status:</span
           >
-          Active
+          ${data.emp_status}
         </li>
         <li class="mb-2 display-28">
           <span
             class="display-26 text-secondary me-2 font-weight-600"
             >Leave Balance:</span
           >
-          Active
+          ${data.leave_balance}
         </li>
         <li class="display-28">
           <span
             class="display-26 text-secondary me-2 font-weight-600"
             >Supervisor:</span
           >
-          Nazim khan
+          ${data.supervisor}
         </li>
       </ul>
     </div>`;

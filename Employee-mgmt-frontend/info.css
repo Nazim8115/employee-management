@@ -102,3 +102,7 @@ section {
 .rounded {
     border-radius: 0.25rem!important;
 }
+img{
+    width: 300px;
+    
+}
