@@ -54,7 +54,7 @@ class employeeController {
   static getEmployeeById = async (req, res) => {
     let x = req.params.id;
     let y = x.split(":");
-    console.log(y[1]);
+
     try {
       const employee = await EmployeeModel.findById(y[1]);
 
