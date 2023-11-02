@@ -52,9 +52,12 @@ class employeeController {
   };
 
   static getEmployeeById = async (req, res) => {
+    let x = req.params.id;
+    let y = x.split(":");
+    console.log(y[1]);
     try {
-      const employee = await EmployeeModel.findById(req.params.id);
-     
+      const employee = await EmployeeModel.findById(y[1]);
+
       if (!employee) {
         return res.status(404).json({ error: "Employee not found" });
       }

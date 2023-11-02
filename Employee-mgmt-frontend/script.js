@@ -17,7 +17,18 @@ $(document).ready(function () {
        <td>${values.job_title}</td>
        <td>${values.emp_status}</td>
        <td><img src = "/Employee-mgmt-backend/public/images/${values.imageUrl}" alt="profile image"/></td>
-       <td><i class="fa-regular fa-eye" style="color: #100f4e"></i> <i
+       <td>
+        <form
+            style="display: inline-block"
+            action="./info.html"
+            method="get"
+            id = "userID";>
+            <input type="hidden" value = "${values._id}" name = "_id" visibility="hide">
+            <button type ="submit" class = "btn">
+              <i class="fa-regular fa-eye" style="color: #100f4e"></i>
+            </button>
+        </form>
+        <i
        class="fa-solid fa-pen-to-square"
        style="color: #100f4e"
         ></i> <i class="fa-solid fa-trash" style="color: #db0c40"></i>
