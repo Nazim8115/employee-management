@@ -15,16 +15,16 @@ $(document).ready(function () {
     dataType: "json",
     success: function (data) {
       let userInfo = "";
-      userInfo += ` <div class="col-lg-6 mb-4 mb-lg-0">
+      userInfo += ` <div class="col-lg-6 mb-4 mb-lg-0 d-flex">
         <img src = "/Employee-mgmt-backend/public/images/${
           data.imageUrl
         }" alt="profile image"/>
         </div>
     <div class="col-lg-6 px-xl-10">
       <div
-        class="bg-secondary d-lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded"
+        class="bg-dark d-lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded"
       >
-        <h3 class="h2 text-white mb-0">${
+        <h3 class="h2 mb-0" id = "name-block">${
           data.first_name + " " + data.last_name
         }</h3>
         <span class="text-light">${data.department}</span>
@@ -56,7 +56,7 @@ $(document).ready(function () {
             class="display-26 text-secondary me-2 font-weight-600"
             >Phone:</span
           >
-          ${data.phone}
+          ${data.phone_number}
         </li>
 
         <li class="mb-2 mb-xl-3 display-28">
