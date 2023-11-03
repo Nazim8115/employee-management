@@ -36,7 +36,9 @@ class employeeController {
         leave_balance,
         imageUrl,
       });
-      res.status(201).json({ message: "Employee created successfully" });
+      res
+        .status(201)
+        .redirect("http://localhost:5500/Employee-mgmt-frontend/index.html");
     } catch (error) {
       res.status(401).json({ message: "server error" });
     }
@@ -66,5 +68,7 @@ class employeeController {
       res.status(500).json({ error: "Internal server error" });
     }
   };
+
+  static deleteEmloyeeByID = async (req, res) => {};
 }
 module.exports = employeeController;
