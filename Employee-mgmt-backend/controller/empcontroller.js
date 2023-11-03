@@ -69,6 +69,18 @@ class employeeController {
     }
   };
 
-  static deleteEmloyeeByID = async (req, res) => {};
+  static deleteEmloyeeByID = async (req, res) => {
+    let x = req.params.id;
+    let y = x.split(":");
+    try {
+      const re = await EmployeeModel.findByIdAndDelete(y[1]);
+      if (!re) {
+        res.send("not found");
+      }
+      res.send("delete employee");
+    } catch (error) {
+      res.send("server error ");
+    }
+  };
 }
 module.exports = employeeController;
