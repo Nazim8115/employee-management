@@ -29,9 +29,17 @@ $(document).ready(function () {
             </button>
         </form>
         <i
-       class="fa-solid fa-pen-to-square"
-       style="color: #100f4e"
-        ></i> <i class="fa-solid fa-trash" style="color: #db0c40"></i>
+          class="fa-solid fa-pen-to-square"
+          style="color: #100f4e"></i>
+        
+        <form
+          style="display: inline-block"
+          method ="get"
+          action="http://localhost:8200/delete-employee/${values._id}">
+          <button type = "submit" class = "btn">
+            <i class="fa-solid fa-trash" style="color: #db0c40"></i>
+          </button>
+        </form>
       </td>
        </tr>`;
       });

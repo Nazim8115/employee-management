@@ -70,14 +70,12 @@ class employeeController {
   };
 
   static deleteEmloyeeByID = async (req, res) => {
-    let x = req.params.id;
-    let y = x.split(":");
     try {
-      const re = await EmployeeModel.findByIdAndDelete(y[1]);
+      const re = await EmployeeModel.findByIdAndDelete(req.params.id);
       if (!re) {
         res.send("not found");
       }
-      res.send("delete employee successfully");
+      res.redirect("http://localhost:5500/Employee-mgmt-frontend/index.html");
     } catch (error) {
       res.send("server error ");
     }
