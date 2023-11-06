@@ -25,6 +25,7 @@ app.post(
 );
 app.get("/employee/:id", employeeController.getEmployeeById);
 app.get("/get-employee", employeeController.getAllEmployee);
+app.delete("/delete-employee/:id", employeeController.deleteEmloyeeByID);
 app.listen(port, () => {
   console.log(`Server is running at :${port}`);
 });

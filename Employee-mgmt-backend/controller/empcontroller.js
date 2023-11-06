@@ -77,7 +77,7 @@ class employeeController {
       if (!re) {
         res.send("not found");
       }
-      res.send("delete employee");
+      res.send("delete employee successfully");
     } catch (error) {
       res.send("server error ");
     }
